@@ -1,7 +1,7 @@
 #!/bin/bash
 #打包GIT两个版本之间变更的文件列表
 fname=$(date +%Y%m%d%H%M%S).gitUpdate.tar.gz
-dirname=/root/lian/new_wei_vengoods
+dirname=/root/mycode
 
 #获取输入的git两个版本号
 echo -n "Enter firstVersionCode and press [ENTER]: "
@@ -30,7 +30,7 @@ else
 fi
 
 #git对比并打包
-git diff $firstcode $secondcode --name-only | xargs tar czvf $fname
+git diff $firstcode $secondcode --name-only | xargs tar --ignore-failed-read -czvf $fname
 if [ ! -f "$fname" ] ;then
 	echo "pack git update files happen error."
 	exit 0
