@@ -32,9 +32,9 @@ fi
 #git对比并打包
 git diff $firstcode $secondcode --name-only | xargs tar czvf $fname
 if [ ! -f "$fname" ] ;then
-	echo "pack git update files done:"$fname
-	exit 1
-else
 	echo "pack git update files happen error."
 	exit 0
+else
+	echo "pack git update files done:"$fname
+	exit 1
 fi
