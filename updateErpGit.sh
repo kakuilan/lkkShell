@@ -1,4 +1,5 @@
 #!/bin/bash
+#更新检出多个GIT库
 
 repos=(
 "/usr/local/nginx/html/erpp"
