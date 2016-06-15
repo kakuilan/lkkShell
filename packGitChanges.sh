@@ -2,7 +2,7 @@
 #打包GIT两个版本之间变更的文件列表
 
 #git项目目录
-$ProjectDir=/root/mycode/project
+ProjectDir="/root/mycode/project"
 
 #保存备份文件的目录
 SaveDir="/home/testcode/"
