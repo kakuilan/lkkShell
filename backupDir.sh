@@ -19,7 +19,7 @@ else
 	exit 0
 fi
 
-find . -type f -regex ".*\.\(php\|html\|js\|css\)" -print0 | xargs --null tar --ignore-failed-read -czvf ${BackupFile}
+find . -type f -regex ".*\.\(php\|html\|js\|css\)" -print0 | tar -T - --ignore-failed-read --null -czvf ${BackupFile} 
 
 if [ ! -f "$BackupFile" ] ;then
 	echo "backup directory happen error!"
