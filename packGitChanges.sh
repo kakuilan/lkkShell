@@ -2,7 +2,7 @@
 #打包GIT两个版本之间变更的文件列表
 
 #git项目目录
-ProjectDir="/root/mycode/project"
+ProjectDir="/root/mycode/project/"
 
 #保存备份文件的目录
 SaveDir="/home/testcode/"
@@ -37,7 +37,7 @@ else
 fi
 
 #git对比并打包
-git diff $firstcode $secondcode --name-only | xargs --null tar --ignore-failed-read -czvf $PackFile
+git diff $firstcode $secondcode --name-only | xargs tar --ignore-failed-read -czvf $PackFile
 if [ ! -f "$PackFile" ] ;then
 	echo "pack git update files happen error."
 	exit 0
