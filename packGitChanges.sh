@@ -37,6 +37,7 @@ else
 fi
 
 #git对比并打包
+git pull
 git diff $firstcode $secondcode --name-only | xargs tar --ignore-failed-read -czvf $PackFile
 if [ ! -f "$PackFile" ] ;then
 	echo "pack git update files happen error."
