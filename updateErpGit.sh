@@ -10,6 +10,7 @@ repos=(
 #array length
 echo "Checking" ${#repos[@]} "repositories for updates"
 
+
 for repo in "${repos[@]}"
 do
   echo "updating... " ${repo}
