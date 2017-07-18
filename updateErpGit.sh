@@ -15,6 +15,7 @@ for repo in "${repos[@]}"
 do
   echo "updating... " ${repo}
   cd "${repo}"
+  git checkout master
   git pull
   git status
 done

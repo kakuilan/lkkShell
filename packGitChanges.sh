@@ -44,10 +44,10 @@ else
 fi
 
 //切换所选分支
-git pull
 if [ "$branch" != "master" ]; then  
 	git checkout $branch
 fi
+git pull
 
 #git对比并打包
 #git diff $firstcode $secondcode --name-only | xargs tar --ignore-failed-read -czvf $PackFile
