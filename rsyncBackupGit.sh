@@ -30,6 +30,7 @@ for repo in "${repos[@]}"
 do
   echo "backuping... " ${repo}
   cd "${repo}"
+  git checkout master
   git pull
   
   #打包本地备份
